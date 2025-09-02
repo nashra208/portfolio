@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nashra | Cybersecurity Consultant</title>
+  <style>
+    body {
+      background: #000;
+      color: #00ff00;
+      font-family: "Fira Code", monospace;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .left {
+      flex: 1 1 500px;
+    }
+
+    .right {
+      flex: 1 1 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      padding: 20px;
+      min-height: 250px;
+    }
+
+    .hacked-text {
+      font-size: 2rem;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      animation: flicker 1.5s infinite;
+      text-align: center;
+    }
+
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+      }
+      20%, 24%, 55% {
+        opacity: 0.3;
+        text-shadow: none;
+      }
+    }
+
+    .terminal {
+      line-height: 1.6;
+    }
+
+    .prompt::before {
+      content: "$ ";
+      color: #00ff00;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background: #00ff00;
+      margin-left: 5px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { background: transparent; }
+    }
+
+    a {
+      color: #00ffaa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #00ff00;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-btn:hover {
+      background: #00ffaa;
+    }
+
+    @media(max-width: 800px){
+      .container {
+        flex-direction: column;
+      }
+      .right {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Content -->
+    <div class="left">
+      <div class="terminal">
+        <div class="section">
+          <p class="prompt">whoami</p>
+          <p>> Nashra — Cybersecurity Consultant & Bug Hunter <span class="cursor"></span></p>
+        </div>
+
+        <div class="section">
+          <p class="prompt">cat services.txt</p>
+          <ul>
+            <li>🔒 Web Application Security (XSS, IDOR, Access Control)</li>
+            <li>☁️ Cloud Security Assessments</li>
+            <li>⚡ Penetration Testing & Vulnerability Assessments</li>
+            <li>🎯 Secure Code Review & Developer Training</li>
+            <li>🐞 Bug Bounty Advisory</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <p class="prompt">cat case_studies.txt</p>
+          <ul>
+            <li>🕵️ Identified & patched critical IDOR in web app</li>
+            <li>☁️ Hardened AWS IAM roles for startup infrastructure</li>
+            <li>📚 Delivered secure coding workshop for dev team</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <p class="prompt">cat skills.txt</p>
+          <ul>
+            <li>⚡ Offensive Security: Recon, Exploitation, Web Pentesting</li>
+            <li>⚡ Scripting: Bash, Python, JavaScript</li>
+            <li>⚡ Tools: Burp Suite, Nmap, SQLmap, custom scripts</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <p class="prompt">ls documents/</p>
+          <p>> <a href="resume.pdf" class="download-btn" target="_blank">Download Resume</a></p>
+        </div>
+
+        <div class="section">
+          <p class="prompt">echo "Contact me"</p>
+          <p>> 📧 <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>> 🔗 <a href="https://github.com/yourgithub" target="_blank">GitHub</a></p>
+          <p>> 💼 <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Hacked Effect -->
+    <div class="right">
+      <div class="hacked-text">⚠️ YOU HAVE BEEN HACKED ⚠️</div>
+    </div>
+  </div>
+</body>
+</html>
